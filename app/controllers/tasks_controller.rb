@@ -4,9 +4,6 @@ class TasksController < ApplicationController
     render json: @tasks.to_json 
   end
 
-  def new
-  end
-
   def create
   end
 
