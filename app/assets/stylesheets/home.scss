@@ -1,3 +1,16 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.task-done{
+	background-color: #1A8D0E !important;
+}
+
+.task-to-do{
+	background-color: #CD333E !important;
+	transition: 1s;
+}
+
+.task-to-do:hover{
+	background-color: #1A8D0E !important;
+	cursor: pointer;
+}
