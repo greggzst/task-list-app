@@ -38,4 +38,24 @@ RSpec.describe Task, type: :model do
       expect(subject).to_not be_valid
     end
   end
+
+  context 'Class methods' do 
+    before(:all) do
+      Task.create(name: 'my task', done: true)
+      Task.create(name: 'my task2', done: false)
+
+      @task1 = Task.find(1)
+      @task2 = Task.find(2)
+    end
+
+    it 'returns done tasks' do
+      done_tasks = Task.done
+      expect(done_tasks).to include(@task1)
+    end
+
+    it 'returns to do tasks' do 
+      to_do_tasks = Task.to_do
+      expect(to_do_tasks).to include(@task2)
+    end
+  end
 end 
