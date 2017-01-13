@@ -9,4 +9,9 @@ class TasksController < ApplicationController
 
   def get_done
   end
+
+  private
+    def task_params
+      params.require(:task).permit(:name, :done)
+    end
 end
