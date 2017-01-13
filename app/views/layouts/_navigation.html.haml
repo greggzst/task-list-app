@@ -1,0 +1,13 @@
+%nav.navbar.navbar-inverse.navbar-static-top
+  .container-fluid
+    .navbar-header
+      = button_tag  type: 'button', class: 'navbar-toggle collapsed', data: {toggle: 'collapse', target: '#main-nav'}, "aria-expanded" => "false" do
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to 'Task List', root_path, class: 'navbar-brand'
+    #main-nav.collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        %li= link_to 'Tasks'
+        %li= link_to 'Blabla'     
