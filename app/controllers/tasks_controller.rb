@@ -7,6 +7,10 @@ class TasksController < ApplicationController
   def create
   end
 
+  def new
+    @task = Task.new
+  end
+
   def get_done
   end
 
