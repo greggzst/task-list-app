@@ -1,2 +1,4 @@
 %h1 Welcome to Task List App where you can manage your tasks
 .row#tasks
+  - @tasks.each do |task|
+    = render task
