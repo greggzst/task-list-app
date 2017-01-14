@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  root 'tasks#index'
   
   resources :tasks, only: [:index, :new, :create] do
     get :get_done, on: :member 
