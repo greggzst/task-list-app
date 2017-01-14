@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Task, type: :model do
 
-  context 'Validation' do
+  describe 'Validation' do
 
     subject { described_class.new(name: 'test task', done: nil) }
 
@@ -39,7 +39,7 @@ RSpec.describe Task, type: :model do
     end
   end
 
-  context 'Class methods' do 
+  describe 'Class methods' do 
     before(:all) do
       Task.create(name: 'my task', done: true)
       Task.create(name: 'my task2', done: false)
