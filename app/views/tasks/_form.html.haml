@@ -9,5 +9,6 @@
   .form-group
     = f.label :name
     = f.text_field :name, class: 'form-control'
+    = f.hidden_field :done, value: '0'
   .form-group
     = f.submit 'Add Task', class: 'btn btn-primary'          

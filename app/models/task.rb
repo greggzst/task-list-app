@@ -9,4 +9,5 @@ class Task < ApplicationRecord
   def self.done
     Task.all.select{ |t| t.done? }
   end
+
 end
