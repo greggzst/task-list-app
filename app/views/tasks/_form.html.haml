@@ -1,0 +1,13 @@
+= form_for @task, remote: true do |f|
+  - if @task.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@task.errors.count, "error")} prohibited this section from being saved:"
+      %ul
+        - @task.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :name
+    = f.text_field :name, class: 'form-control'
+  .form-group
+    = f.submit 'Add Task', class: 'btn btn-primary'          
