@@ -1,4 +1,6 @@
 class TasksController < ApplicationController
+  before_action :set_task, only: [:get_done]
+
   def index
     @tasks = Task.all
   end
@@ -22,10 +24,15 @@ class TasksController < ApplicationController
   end
 
   def get_done
+    @task.update_attribute(:done, true)
   end
 
   private
     def task_params
       params.require(:task).permit(:name, :done)
+    end
+
+    def set_task
+      @task = Task.find(params[:id])
     end
 end
