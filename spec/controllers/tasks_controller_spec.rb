@@ -24,8 +24,8 @@ RSpec.describe TasksController, type: :controller do
   describe '#get_done' do
 
     before(:all) do
-      Task.create(id: 10 ,name: 'go all out', done: false)
-      @task = Task.find(10)
+      Task.create(name: 'go all out', done: false)
+      @task = Task.last
     end
 
     it 'changes task to be done state' do
