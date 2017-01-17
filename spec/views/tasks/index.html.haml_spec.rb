@@ -14,4 +14,5 @@ RSpec.describe "tasks/index", type: :view do
     expect(rendered).to have_selector("div.well.task-to-do", text: 'do homework')
     expect(rendered).to have_selector("div.well.task-done", text: 'start dancing')
   end
+  
 end
