@@ -1,24 +1,18 @@
-# README
+# Task List App
+Very simple Rails application that lets you create your own tasks which are presented as Bootstrap wells. You can mark your task as done by clicking on it.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Written using Rails, Haml, jQuery, SASS and Bootstrap, tested using RSpec.
 
-Things you may want to cover:
+# How to run it:
 
-* Ruby version
+```
+rails s
+```
 
-* System dependencies
+# How to run the test suite
 
-* Configuration
+```
+rspec
+```
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
