@@ -3,6 +3,10 @@ Very simple Rails application that lets you create your own tasks which are pres
 
 Written using Rails, Haml, jQuery, SASS and Bootstrap, tested using RSpec.
 
+#Preview
+
+https://task-list-app-greggzst.herokuapp.com/
+
 # How to run it:
 
 ```
