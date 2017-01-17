@@ -21,6 +21,11 @@ RSpec.describe TasksController, type: :controller do
     end
   end
 
+  describe 'DELETE destroy' do
+    it 'deletes task' do
+    end
+  end
+
   describe '#get_done' do
 
     before(:all) do
