@@ -3,7 +3,7 @@
     .well{ :class => "task-done" }
       %strong= task.name
   - else
-    = link_to get_done_task_path(task) do
+    = link_to get_done_task_path(task), remote: true do
       .well{ :class => "task-to-do" }
         %strong= task.name
 
