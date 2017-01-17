@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: [:get_done]
+  before_action :set_task, only: [:get_done, :destroy]
 
   def index
     @tasks = Task.all
@@ -20,6 +20,15 @@ class TasksController < ApplicationController
         format.html { redirect_to root_url }
         format.json {render json: @task.errors, status: :unprocessable_entity}
       end
+    end
+  end
+
+  def destroy
+    @task.destroy
+    respond_to do |format|
+      format.js
+      format.html { redirect_to root_path, notice: 'Task was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 
