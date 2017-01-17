@@ -1,3 +1,9 @@
-.col-lg-3.col-lg-offset-1.well{ :class => "#{task.done? ? 'task-done' : 'task-to-do'}" }
-  %strong= task.name
+.col-lg-3.col-lg-offset-1
+  - if task.done?
+    .well{ :class => "task-done" }
+      %strong= task.name
+  - else
+    = link_to get_done_task_path(task) do
+      .well{ :class => "task-to-do" }
+        %strong= task.name
 
