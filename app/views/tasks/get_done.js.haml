@@ -1,3 +1,1 @@
-$(".task-link").on("ajax:success", function(e,data,status,xhr){
-$(this).find("div").addClass("task-done").removeClass("task-to-do").unwrap();
-});
+$("#task_#{@task.id}").addClass("task-done").removeClass("task-to-do");

@@ -1,3 +1,1 @@
-$(".delete-link").on("ajax:success", function(e,data,status,xhr){
-$(this).parent().parent().fadeOut();
-});
+$("#task_#{@task.id}").parent().fadeOut();
