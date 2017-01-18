@@ -1,1 +1,7 @@
-$('form').append("#{j render 'shared/errors', obj: @task}");
+if($('#error-box').length){
+$('#error-box').remove();	
+}
+
+
+$('form').before("#{j render 'shared/errors', obj: @task}");
+toastr.error("There was an error with #{@task.name} task!");

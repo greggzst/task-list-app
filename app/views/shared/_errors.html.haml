@@ -1,6 +1,6 @@
 - if obj.errors.any?
-  .alert.alert-danger
-    %h2= "#{pluralize(obj.errors.count, "error")} prohibited this section from being saved:"
+  #error-box.alert.alert-danger.text-left
+    %h2= "#{pluralize(obj.errors.count, "error")} prohibited this task from being saved:"
     %ul
       - obj.errors.full_messages.each do |msg|
         %li= msg
