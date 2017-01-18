@@ -17,8 +17,7 @@ class TasksController < ApplicationController
         format.html { redirect_to root_url }
         format.js
       else
-        format.html { redirect_to root_url }
-        format.json {render json: @task.errors, status: :unprocessable_entity}
+        format.js {render 'error.js.haml', status: 422}
       end
     end
   end
