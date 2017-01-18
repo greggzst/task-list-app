@@ -1,1 +1,2 @@
 $("#task_#{@task.id}").addClass("task-done").removeClass("task-to-do");
+toastr.success("#{@task.name} has been done!");
