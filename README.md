@@ -10,6 +10,7 @@ https://task-list-app-greggzst.herokuapp.com/
 # How to run it:
 
 ```
+bundle install
 rails s
 ```
 
