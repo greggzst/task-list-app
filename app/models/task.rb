@@ -1,5 +1,5 @@
 class Task < ApplicationRecord
-  validates :name, presence: true, length: {minimum: 5, maximum: 20}, uniqueness: true
+  validates :name, presence: true, length: {minimum: 5, maximum: 30}, uniqueness: true
   validates :done, inclusion: { in: [true, false] }
 
   def self.to_do
