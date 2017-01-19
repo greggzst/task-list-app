@@ -38,7 +38,7 @@ $text-well-color: #FFF;
 	}
 }
 
-.delete-link{
+.delete-link, .delete-link:hover{
 	color: $text-well-color;
 	float: right;
 }
