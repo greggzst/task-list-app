@@ -1,18 +1,22 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$done-color: #16890a;
+$to-do-color: #CD333E;
+$text-well-color: #FFF;
+
 .task-done{
-	background-color: #1A8D0E !important;
+	background-color: $done-color !important;
 	text-decoration: line-through;
 }
 
 .task-to-do{
-	background-color: #CD333E !important;
+	background-color: $to-do-color !important;
 	transition: 1s;
 }
 
 .task-to-do:hover{
-	background-color: #1A8D0E !important;
+	background-color: $done-color!important;
 	cursor: pointer;
 	text-decoration: line-through;
 }
@@ -26,7 +30,7 @@
 }
 
 .well strong{
-	color: #FFF;
+	color: $text-well-color;
 
 	a{
 		color: inherit;
@@ -35,6 +39,6 @@
 }
 
 .delete-link{
-	color: #FFF;
+	color: $text-well-color;
 	float: right;
 }

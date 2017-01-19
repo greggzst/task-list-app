@@ -2,9 +2,11 @@
   - if task.done?
     .well{ :id => "task_#{task.id}", :class => "task-done" }
       %strong= task.name
-      = link_to '', task_path(task), method: :delete, remote: true, class: 'glyphicon glyphicon-remove delete-link'
+      = link_to task_path(task), method: :delete, remote: true, class: 'glyphicon glyphicon-remove delete-link' do
+        %span.sr-only Delete
   - else
     .well{ :id => "task_#{task.id}", :class => "task-to-do", data: {:url => get_done_task_path(task)} }
       %strong= task.name
-      = link_to '', task_path(task), method: :delete, remote: true, class: 'glyphicon glyphicon-remove delete-link'
+      = link_to task_path(task), method: :delete, remote: true, class: 'glyphicon glyphicon-remove delete-link' do
+        %span.sr-only Delete
 
